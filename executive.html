@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="icon" href="assets/logo1.png">
+<link rel="stylesheet" href="robot.css">
+<script src="robot.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Executives</title>
+	<!-- Add links to your CSS and JavaScript files here -->
+	<style>
+
+body {
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: Horizon, sans-serif;
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Roboto Mono Light', monospace;
+    color: white;
+}
+
+.portrait-text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-family: 'Horizon', sans-serif;
+    font-size: 10rem;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			height: calc(100vh - 80px);
+			padding-top: 60px;
+		}
+		.container p {
+			margin-bottom: 0;
+		}
+		.logo {
+			max-height: 50px;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#"></a>	  
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="activities.html">Activities</a></li>
+				<li><a href="handover.html">Handover Picture</a></li>
+				<li><a href="sessionpic.html">Session Picture</a></li>
+				<li><a href="dep.html">Departments</a></li>
+				<li><a href="executive.html">Executives</a></li>
+				<li><a href="subex.html">Sub-Executives</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="joinus.html">Join Us</a></li>
+			  </ul>
+		</div>
+	  </nav>	  
+	<header>
+		<!-- Add your logo and navigation menu here -->
+	</header>
+	<main>
+		<!-- Add your main content here -->
+		<div class="container">
+			<html>
+			<head>
+				<title>Image Slider</title>
+				<style>
+					.container {
+						position: relative;
+						width: 1000px;
+						height: 650px;
+						margin: 0 auto;
+						overflow: hidden;
+					}
+					.container img {
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						transition: opacity 0.5s ease-in-out;
+						opacity: 0;
+						z-index: -1;
+					}
+			
+					.container img.active {
+						opacity: 1;
+						z-index: 0;
+					}
+			
+					.btn {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 50px;
+						height: 50px;
+						background-color: rgba(255, 255, 255, 0.5);
+						border-radius: 50%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						font-size: 24px;
+						color: #000;
+						cursor: pointer;
+						transition: all 0.3s ease-in-out;
+					}
+			
+					.btn:hover {
+						background-color: rgba(255, 255, 255, 0.8);
+						transform: translateY(-50%) scale(1.2);
+						color: #fff;
+					}
+			
+					.btn.prev {
+						left: 20px;
+					}
+			
+					.btn.next {
+						right: 20px;
+					}
+
+					@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    height: 1000px;
+	width: 1000px;
+  }
+  
+  .container img {
+    height: auto;
+  }
+  
+  .btn {
+    font-size: 10px;
+  }
+  
+  .btn.prev {
+    left: 10px;
+  }
+  
+  .btn.next {
+    right: 10px;
+  }
+}
+				</style>
+			</head>
+			<body>
+				<div class="container">
+					<img class="active" src="former1.png">
+					<img src="former2.png">
+					<img src="higherpanel.png">
+					<img src="lowerpanel.png">
+					<img src="lowerpanel2.png">
+					<div class="btn prev">&#8249;</div>
+					<div class="btn next">&#8250;</div>
+				</div>
+			
+				<script>
+					const images = document.querySelectorAll('.container img');
+					const prevBtn = document.querySelector('.btn.prev');
+					const nextBtn = document.querySelector('.btn.next');
+					let currentIndex = 0;
+			
+					function showImage(index) {
+						images.forEach(image => image.classList.remove('active'));
+						images[index].classList.add('active');
+					}
+			
+					function nextImage() {
+						if (currentIndex === images.length - 1) {
+							currentIndex = 0;
+						} else {
+							currentIndex++;
+						}
+						showImage(currentIndex);
+					}
+			
+					function prevImage() {
+						if (currentIndex === 0) {
+							currentIndex = images.length - 1;
+						} else {
+							currentIndex--;
+						}
+						showImage(currentIndex);
+					}
+			
+					nextBtn.addEventListener('click', nextImage);
+					prevBtn.addEventListener('click', prevImage);
+				</script>
+			</body>
+			</html>
+			
+		</div>
+        <div class="center">
+			<div class="ex-collage">
+          </div>          
+	</main>
+	<footer>	
+		<!-- Add your footer content here -->
+		<footer>
+			<style>
+				.footer-image {
+					opacity: 0.4; /* Set opacity to 40% */
+				}
+			</style>
+		  </footer>		  
+	</footer>
+</body>
+</html>
+
+

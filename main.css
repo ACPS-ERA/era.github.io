@@ -1,0 +1,444 @@
+html{
+  scroll-behavior: smooth;
+  --scrollbarBG: white;
+  --thumbBG: #90A4AE;
+}
+
+body::-webkit-scrollbar{
+  width: 11px;
+
+}
+body{
+  background: white;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track{
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb{
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+::selection{
+  color: rgb(18, 200, 255);
+  background: none;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffffcc;
+  border: none;
+}
+.navbar-toggle {
+  border: none;
+}
+.navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-brand {
+  font-family: 'Horizon', sans-serif;
+  font-size: 28px;
+  color: white;
+}
+.navbar-nav li a {
+  transition: .3s;
+  color: rgb(2, 2, 2);
+  font-family: 'Roboto Mono Light', sans-serif;
+}
+.navbar-nav li a:hover{
+  color: white;
+  border-radius: 11px;
+}
+/* welcome effects */
+.welcome{
+  font-family: 'Roboto Mono Light', monospace;
+  transition: .5s;
+}
+.welcome:hover{
+  font-size: 60px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+/* welcome effects end */
+
+.text1 {
+  margin-right: 20px;
+}
+
+.pad {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  margin: 10px;
+  height: 50px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  font-family: "Roboto Mono Thin", sans-serif;
+  color: white;
+}
+
+.text-container p {
+  margin: 0 20px;
+}
+
+.photo-collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.photo-collage img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border: 2px solid rgb(198, 188, 188);
+}
+
+.ex-collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.ex-collage img {
+  width: 148px;
+  height: 148px;
+  object-fit: cover;
+  border: 2px solid rgb(198, 188, 188);
+}
+
+.skills-collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.skills-collage img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: 2px solid rgb(6, 5, 5);
+}
+
+#welcome-paragraph {
+  color: rgb(255, 255, 255); /* change to your desired color */
+  font-family: "Roboto Mono Thin", sans-serif; /* change to your desired font */
+  font-size: 16px;
+}
+
+.join-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  transition: .3s;
+  box-shadow: 10px 10px 10px rgb(8, 8, 8);
+  text-decoration: none;
+}
+.join-button:hover{
+  width: 300px;
+  text-decoration: none;
+  height: 70px;
+  border-radius: 45px;
+  display: fixed;
+}
+/* join us text effect */
+.join-txt h1 {
+  color: #fff;
+  font-size: 17.5px;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+/* join us text effect end */
+
+.subex-collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.subex-collage img {
+  width: 1000px;
+  height: 500px;
+  object-fit: cover;
+  border: 2px solid rgb(198, 188, 188);
+}
+
+.activities-collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.activities-collage img {
+  width: 1000px;
+  height: 500px;
+  object-fit: cover;
+  border: 2px solid rgb(198, 188, 188);
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider-images {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slider-images img {
+  width: 100%;
+  scroll-snap-align: center;
+}
+
+.slider-controls {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  justify-content: space-between;
+}
+
+.slider-control {
+  background-color: white;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 50%;
+}
+
+.slider-control-back {
+  transform: rotate(180deg);
+}
+
+
+.small-image1 {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 250px;
+  border: black;
+  transform: translateX(-50%);
+  border-radius: none;
+  margin: 0 auto;
+  transition: .5s;
+}
+.small-image1:hover{
+  width: 300px;
+}
+
+.small-image2 {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  width: 250px;
+  border: black;
+  transform: translateY(-50%);
+  border-radius: none;
+  margin-left: 500px;
+  transition: .5s;
+}
+.small-image2:hover{
+  width: 300px;
+}
+.small-image3 {
+  position: absolute;
+  top: 55%;
+  right: 30%;
+  width: 250px;
+  border: black;
+  transform: translateY(-50%);
+  border-radius: none;
+  margin-right: 500px;
+  transition: .5s;
+}
+.small-image3:hover{
+  width: 300px;
+}
+.dev-title{
+  animation: color-change 2s infinite;
+}
+@keyframes color-change {
+  0% { color: yellow; }
+  50% { color: white; }
+  100% { color: yellow; }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+  .welcome{
+    font-size: 35x;
+    font-family: 'Roboto Mono Light', monospace;
+    transition: .5s;
+  }
+
+  .welcome:hover{
+    font-size: 60px;
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  #welcome-paragraph {
+    color: rgb(255, 255, 255); /* change to your desired color */
+    font-family: "Roboto Mono Thin", sans-serif; /* change to your desired font */
+    font-size: 12.3px;
+  }
+
+  .pad {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    margin: 10px;
+    height: 50px;
+  }
+  
+  .photo-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .photo-collage img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid rgb(198, 188, 188);
+  }
+  
+  .skills-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .skills-collage img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 2px solid rgb(6, 5, 5);
+  }
+
+  .subex-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .subex-collage img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid rgb(198, 188, 188);
+  }
+  
+  .activities-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .activities-collage img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid rgb(198, 188, 188);
+  }
+  
+  
+
+  
+}

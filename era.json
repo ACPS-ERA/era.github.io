@@ -1,0 +1,14 @@
+{
+    "Web_name": "era-acps",
+    "domain_$conn": "era-acps.unaux.com",
+    "$conn-ver": 8.2,
+    "web_email": "era.official52@gmail.com",
+    "server_$conn": "mysqli",
+    "server_mysqli_$conn": "PHP{(VALID)}",
+    "localhost_server_name": "era-acps",
+    "server": "localhost",
+    "created": 2023,
+    "auth": "false",
+    "path": "http://127.0.0.1:5500/",
+    "active": true
+}
