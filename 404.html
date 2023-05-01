@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wait for next quiz..</title>
+</head>
+<body>
+
+    <div class="container">
+        <img src="countdown-logo.png" class="logo">
+
+        <div class="content">
+            <p>Website is under Constraction</p>
+            <br>
+            <h1>We're <span>Launching</span> soon</h1>
+            <div class="launch-time">
+                <div>
+                    <p id="days">00</p>
+                    <br>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <br>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <br>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <br>
+                    <span>Seconds</span>
+                </div>
+            </div>
+        </div>
+        <img src="rocket.png" class="rocket">
+    </div>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-image: url(background-count.png);
+            background-position: center;
+            background-size: cover;
+            padding: 0 8%;
+            position: relative;
+        }
+        .logo{
+            width: 120px;
+            padding: 20px 0;
+            cursor: pointer;
+        }
+        .content{
+            top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .content h1{
+            font-size: 64px;
+            font-weight: 600;
+        }
+        .content h1 span{
+            color: #ff3753;
+        }
+        .content a{
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            padding: 12px 25px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .content a img{
+            width: 15px;
+            margin-left: 10px;
+        }
+        .launch-time{
+            display: flex;
+        }
+        .launch-time div{
+            flex-basis: 100px;
+        }
+        .launch-time div p{
+            font-size: 60px;
+            margin-bottom: -14px;
+        }
+        .rocket{
+            width: 250px;
+            position: absolute;
+            right: 10%;
+            bottom: 0;
+            animation: rocket 4s linear infinite;
+        }
+        @keyframes rocket{
+            0%{
+                bottom: 0;
+                opacity: 0;
+            }
+            100%{
+                bottom: 105%;
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script>
+        var countDownDate = new Date("may 2, 2023 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+        },1000);
+    </script>
+</body>
+</html>
