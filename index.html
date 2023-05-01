@@ -1,142 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="icon" href="logo1.jpg">
+<link rel="stylesheet" href="robot.css">
+<script src="robot.js"></script>
+<link rel="icon" href="assets/logo1.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>era</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>era</title>
+	<!-- Add links to your CSS and JavaScript files here -->
+	<style>
+body {
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: Horizon, sans-serif;
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Roboto Mono Light', monospace;
+    color: white;
+}
+
+.portrait-text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-family: 'Horizon', sans-serif;
+    font-size: 10rem;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			height: calc(100vh - 80px);
+			padding-top: 60px;
+		}
+		.container p {
+			margin-bottom: 0;
+		}
+		.logo {
+			max-height: 50px;
+			margin-right: 10px;
+		}
+	</style>
 </head>
 <body>
-
-    <div class="container">
-        <img src="countdown-logo.png" class="logo">
-
-        <div class="content">
-            <p>Website is under Constraction</p>
-            <br>
-            <h1>We're <span>Launching</span> soon</h1>
-            <div class="launch-time">
-                <div>
-                    <p id="days">00</p>
-                    <br>
-                    <span>Days</span>
-                </div>
-                <div>
-                    <p id="hours">00</p>
-                    <br>
-                    <span>Hours</span>
-                </div>
-                <div>
-                    <p id="minutes">00</p>
-                    <br>
-                    <span>Minutes</span>
-                </div>
-                <div>
-                    <p id="seconds">00</p>
-                    <br>
-                    <span>Seconds</span>
-                </div>
-            </div>
-        </div>
-        <img src="rocket.png" class="rocket">
-    </div>
-
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            box-sizing: border-box;
-        }
-        .container{
-            width: 100vw;
-            height: 100vh;
-            background-image: url(background-count.png);
-            background-position: center;
-            background-size: cover;
-            padding: 0 8%;
-            position: relative;
-        }
-        .logo{
-            width: 120px;
-            padding: 20px 0;
-            cursor: pointer;
-        }
-        .content{
-            top: 50%;
-            position: absolute;
-            transform: translateY(-50%);
-            color: #fff;
-        }
-        .content h1{
-            font-size: 64px;
-            font-weight: 600;
-        }
-        .content h1 span{
-            color: #ff3753;
-        }
-        .content a{
-            background: transparent;
-            border: 2px solid #fff;
-            outline: none;
-            padding: 12px 25px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            margin-top: 30px;
-            cursor: pointer;
-        }
-        .content a img{
-            width: 15px;
-            margin-left: 10px;
-        }
-        .launch-time{
-            display: flex;
-        }
-        .launch-time div{
-            flex-basis: 100px;
-        }
-        .launch-time div p{
-            font-size: 60px;
-            margin-bottom: -14px;
-        }
-        .rocket{
-            width: 250px;
-            position: absolute;
-            right: 10%;
-            bottom: 0;
-            animation: rocket 4s linear infinite;
-        }
-        @keyframes rocket{
-            0%{
-                bottom: 0;
-                opacity: 0;
-            }
-            100%{
-                bottom: 105%;
-                opacity: 1;
-            }
-        }
-    </style>
-
-    <script>
-        var countDownDate = new Date("may 2, 2023 00:00:00").getTime();
-        var x = setInterval(function(){
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
-
-        },1000);
-    </script>
+	<nav class="navbar">
+		<div class="navbar-header">
+			<div class="top-pad"></div>
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#"></a>	  
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		    <ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="activities.html">Activities</a></li>
+				<li><a href="handover.html">Handover Picture</a></li>
+				<li><a href="sessionpic.html">Session Picture</a></li>
+				<li><a href="dep.html">Departments</a></li>
+				<li><a href="executive.html">Executives</a></li>
+				<li><a href="subex.html">Sub-Executives</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="joinus.html">Join Us</a></li>
+			  </ul>
+		</div>
+	</nav>
+	<header>
+		<!-- Add your logo and navigation menu here -->
+	</header>
+	<main>
+		<!-- Add your main content here -->
+		<div class="container">
+			<h1 class="welcome">WELCOME!</h1>
+			<div class="center">
+				<p id="welcome-paragraph">
+					Welcome to Electronics & Robotics club of Adamjee! We are a community of students and robotics enthusiasts who come together to design, build, and program robots. Our club provides a supportive environment where members can learn about robotics, develop new skills, and participate in competitions and events. We believe in the power of robotics to inspire innovation and creativity, and we are committed to sharing our passion with others. Whether you are a beginner or an experienced robotics enthusiast, we invite you to join us and become part of our community. Come and explore the exciting world of robotics with us!</p>
+			</div>
+		</div>
+	</main>
+	<footer>				
+		<!-- Add your footer content here -->
+		<footer>
+			<style>
+				.footer-image {
+					opacity: 0.4; /* Set opacity to 40% */
+				}
+			</style>
+	</footer>		  
+		<img src="logo1.png" alt="Logo 1" class="logo">
+		<img src="logo2.png" alt="Logo 2" class="logo">
+		<br><br>
+		<p>Electronics And Robotics Club of Adamjee #A New Era Begins</p>
+	</footer>
 </body>
 </html>
 
